@@ -35,7 +35,7 @@ RSpec.describe CodebreakerRake do
   context 'when right route' do
     context 'with no game' do
       it 'returns redirect' do
-        urls.values[3..10].each do |route|
+        urls.values[3..9].each do |route|
           get route
           expect(last_response).to be_redirect
         end

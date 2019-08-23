@@ -73,7 +73,7 @@ class CodebreakerRake
   end
 
   def start_redirect
-    return redirect('game') if @request.session.key?(:game)
+    return redirect('game') if @request.session.key?(:game) && @request.session.key?(:user)
 
     redirect unless @request.params.key?('username')
   end
